@@ -1,3 +1,5 @@
+![Template Hierarchy](template-hierarchy-scaled.webp)
+
 # My Own Theme
 
 ## WordPress Theme File Structure
@@ -13,7 +15,6 @@ This theme follows the standard WordPress theme file structure. Below is an expl
 - **sidebar.php**: Contains the sidebar section of the theme, which may include widgets or additional navigation.
 - **functions.php**: This file is used to add custom functionality to the theme, such as registering menus, widgets, and enqueueing styles and scripts.
 - **style.css**: The main stylesheet for the theme. It also contains the theme metadata required by WordPress.
-- **screenshot.png**: A preview image of the theme, displayed in the WordPress admin panel.
 
 ## Explanation of Key Templates
 
