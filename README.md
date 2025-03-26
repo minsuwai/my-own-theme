@@ -1,8 +1,8 @@
-![Template Hierarchy](template-hierarchy-scaled.webp)
-
 # My Own Theme
 
 ## WordPress Theme File Structure
+
+![Template Hierarchy](template-hierarchy-scaled.webp)
 
 This theme follows the standard WordPress theme file structure. Below is an explanation of the key files and their purposes:
 
