@@ -1,3 +1,5 @@
+<?php get_header(); ?>
+
 <h1>This is archive page</h1>
 
 <h1><?php the_archive_title(); ?></h1>
@@ -13,3 +15,5 @@ while (have_posts()) {
     </div>
 
 <?php } ?>
+
+<?php get_footer(); ?>

@@ -1,3 +1,5 @@
+<?php get_header(); ?>
+
 <h1>Hello from my own theme</h1>
 
 <?php

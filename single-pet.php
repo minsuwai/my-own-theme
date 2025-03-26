@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<h1>Hello from a page</h1>
+<h1>Hello from custom post-type single pet page</h1>
 
 <?php
 
@@ -9,7 +9,7 @@ while (have_posts()) {
 ?>
 
     <div>
-        <p>This is a page, not a post.</p>
+        <p>This is a single pet, not a post</p>
         <h2><?php the_title(); ?></h2>
         <p><?php the_content(); ?></p>
     </div>

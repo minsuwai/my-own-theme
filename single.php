@@ -1,3 +1,5 @@
+<?php get_header(); ?>
+
 <h1>Hello from single page</h1>
 
 <?php
@@ -12,3 +14,5 @@ while (have_posts()) {
     </div>
 
 <?php } ?>
+
+<?php get_footer(); ?>
