@@ -1,1 +1,1 @@
-alert("this is javascript file");
+alert( 'this is javascript file' );

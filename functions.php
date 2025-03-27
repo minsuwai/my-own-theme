@@ -15,3 +15,11 @@ function my_own_theme_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'my_own_theme_scripts');
+
+function wpdocs_create_blocks_mysite_block_init()
+{
+
+    register_block_type(__DIR__ . '/build/blockone');
+    register_block_type(__DIR__ . '/build/blocktwo');
+}
+add_action('init', 'wpdocs_create_blocks_mysite_block_init');

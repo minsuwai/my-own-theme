@@ -24,3 +24,57 @@ This theme follows the standard WordPress theme file structure. Below is an expl
 - **page.php**: This template is used to display static pages, such as "About Us" or "Contact."
 
 Feel free to customize these files to suit your needs!
+
+## Custom Blocks
+
+This theme includes custom blocks created using the WordPress Block API. These blocks extend the functionality of the WordPress block editor (Gutenberg) while maintaining compatibility with the classic theme structure.
+
+### Available Custom Blocks
+
+1. **blockone (myblocks/blockone)**: A dynamic block that demonstrates custom block functionality.
+2. **blocktwo (myblocks/blocktwo)**: Another custom block with similar structure.
+
+### How Blocks Were Created
+
+The custom blocks were created using the WordPress create-block scaffolding tool. For example, the first block was created using:
+
+```
+npx @wordpress/create-block@latest blockone --variant dynamic --target-dir . --namespace myblocks
+```
+
+This command:
+
+- Creates a block named "blockone"
+- Uses the dynamic block variant (which includes PHP rendering)
+- Places files in the current directory
+- Uses "myblocks" as the namespace
+
+### Block Structure
+
+Each block follows the modern WordPress block architecture:
+
+- **src/blockname/**: Source files for the block
+
+  - **block.json**: Block configuration and metadata
+  - **index.js**: Main entry point for the block editor
+  - **edit.js**: React component for the editor view
+  - **view.js**: Frontend JavaScript functionality
+  - **render.php**: Server-side rendering for dynamic content
+  - **editor.scss**: Styles for the editor
+  - **style.scss**: Styles for both editor and frontend
+
+- **build/blockname/**: Compiled assets for the block
+
+### Block Registration
+
+Custom blocks are registered in the `functions.php` file using:
+
+```php
+function wpdocs_create_blocks_mysite_block_init() {
+    register_block_type(__DIR__ . '/build/blockone');
+    register_block_type(__DIR__ . '/build/blocktwo');
+}
+add_action('init', 'wpdocs_create_blocks_mysite_block_init');
+```
+
+This makes the blocks available in the WordPress block editor when editing pages or posts.
